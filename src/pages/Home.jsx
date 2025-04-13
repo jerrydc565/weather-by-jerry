@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "../assets/Cloud logo.png";
 import { Link } from "react-router-dom";
 import "./styles/Home.css";
-import Order from "./order";
 function Home() {
   return (
     <main className="home">
