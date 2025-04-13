@@ -7,6 +7,7 @@ import BrokenCloud from "./assets/overcast cloud.png";
 import Snow from "./assets/snow.png.png";
 import ModerateRain from "./assets/moderate.png";
 import FewCloud from "./assets/FewCloud.png";
+import ScatteredCloud from "./assets/scattered cloud2.png";
 
 function Weather() {
   const [date, setDate] = useState("");
@@ -63,6 +64,8 @@ function Weather() {
       return FewCloud;
     } else if (info.includes("roken")) {
       return BrokenCloud;
+    } else {
+      return ScatteredCloud;
     }
   };
 
@@ -88,7 +91,12 @@ function Weather() {
         )}
         {weather && (
           <section>
-            <img src={getImage(weather.info)} alt="" className="weather-img" style={{width: "20%"}} />
+            <img
+              src={getImage(weather.info)}
+              alt=""
+              className="weather-img"
+              style={{ width: "20%" }}
+            />
             <p>Temperature: {weather.temp} oC</p>
             <p>Pressure: {weather.pressure} hpa</p>
             <p>Humidity: {weather.humidity}</p>
